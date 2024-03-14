@@ -1,0 +1,19 @@
+<h1><u>Your Cart</u></h1>
+<table>
+    <tr style="text-align: left;">
+        <th>Donut</th>
+        <th>Calories</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    @for(d of cart; track d.id) {
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.calories}}</td>
+            <td>$1.00</td>
+            <td><button (click) = "removeFromCart(d.id)">Remove</button></td>
+        </tr>
+    }
+</table>
+<p>Calories: {{totalCals}}</p>
+<p>Total: {{totalPrice | currency}}</p>

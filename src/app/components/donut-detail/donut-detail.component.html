@@ -1,0 +1,13 @@
+<h2><u>{{donutResult.name}}</u></h2>
+<p>Calories: {{donutResult.calories}}</p>
+<p>Extras: {{donutResult.extras}}</p>
+<img src="{{donutResult.photo}}">
+<br/>
+<br/>
+<a href="{{donutResult.photo_attribution}}">Image Attribution</a>
+<br/>
+<br/>
+<button (click)="sendDonutToCart(donutResult)">Add to Cart</button>
+<br/>
+<br/>
+<a routerLink="/Cart/">View Cart</a>
